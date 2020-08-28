@@ -18,9 +18,9 @@
       <form
               class="bar"
               id="search-city-form" >
-              <label>Current weather in</label> 
+              <label class= "label">Current weather in</label> 
               <input
-                class="form-control"
+                class="form-control col-7"
                 type="text"
                 placeholder="Search..."
                 aria-label="Search"
@@ -29,14 +29,14 @@
               />
               
             </form>
-            <span id="location"> <i class="fas fa-map-marker-alt location"></i> </span>
-</p>
-<h1 id="current-city">London</h1>
+            <span id="location"> <i class="fas fa-map-marker-alt location"></i> </span></p>
+
+<h1 id="current-city"></h1>
 <div class="current-dt" id="current-datetime">
     Friday 24/07 at 21:00 </div>
 
 <span class="current" id="current-temp">
-<h2 id="current-temp">21°C</h2> </span>
+<h2 id="current-temp"></h2> </span>
 <span class="change-unit" id="change-unit">
     <a href="#"><small>°F</small></a>
     / </span> 
@@ -46,11 +46,12 @@
 <span class="weather-emoji">
     🌧
 </span>
+<div class="weatherDescription" id= "description">Partly Cloudy</div>
 <div class="current-hl">
     <p>
-        H:24°C
+      H:<span id="currentHigh"></span>°C
         <br/>
-        L:17°C
+        L:<span id="currentLow"></span>°C
 </p>
 </div>
 </span>
