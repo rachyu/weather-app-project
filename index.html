@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/30a6f4ed79.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Tajawal&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="border">
+    <div class="card-all"><p>
+      <form
+              class="bar"
+              id="search-city-form" >
+              <label>Current weather in</label> 
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Search..."
+                aria-label="Search"
+                autocomplete="off"
+                id="search-city"
+              />
+              
+            </form>
+            <span id="location"> <i class="fas fa-map-marker-alt location"></i> </span>
+</p>
+<h1 id="current-city">London</h1>
+<div class="current-dt" id="current-datetime">
+    Friday 24/07 at 21:00 </div>
+
+<span class="current" id="current-temp">
+<h2 id="current-temp">21°C</h2> </span>
+<span class="change-unit" id="change-unit">
+    <a href="#"><small>°F</small></a>
+    / </span> 
+<span class = "change-unit change-unit-hidden" id="change-unit-hidden">
+  <a href="#"><small>°C</small></a>
+  </span>
+<span class="weather-emoji">
+    🌧
+</span>
+<div class="current-hl">
+    <p>
+        H:24°C
+        <br/>
+        L:17°C
+</p>
+</div>
+</span>
+<div class="row forecast">
+<div class="col nd">
+    <div class="card border-info rounded-circle" style="max-width: 10rem;">
+        <div class="card-body text-info">
+            <strong class="card-title">Date</strong>
+          <p class="card-text">🌧<br/> <i class="fas fa-long-arrow-alt-up"></i>21°C <i class="fas fa-long-arrow-alt-down"></i>14°C</p>
+        </div>
+      </div>
+</div>
+
+<div class="col nd-1">
+    <div class="card border-info rounded-circle" style="max-width: 10rem;">
+        <div class="card-body text-info">
+          <strong class="card-title">Date</strong>
+          <p class="card-text">🌧<br/> <i class="fas fa-long-arrow-alt-up"></i>21°C <i class="fas fa-long-arrow-alt-down"></i>14°C</p>
+        </div>
+      </div>
+ </div>
+
+<div class="col nd-2">
+ <div class="card border-info rounded-circle" style="max-width: 10rem;">
+            <div class="card-body text-info">
+            <strong class="card-title">Date</strong>
+              <p class="card-text">🌧<br/> <i class="fas fa-long-arrow-alt-up"></i>21°C <i class="fas fa-long-arrow-alt-down"></i>14°C</p>
+            </div>
+          </div>
+</div>         
+<div class="col nd-3">
+ <div class="card border-info rounded-circle" style="max-width: 10rem;">
+                <div class="card-body text-info">
+                    <strong class="card-title">Date</strong>
+                  <p class="card-text">☀<br/> <i class="fas fa-long-arrow-alt-up"></i>21°C <i class="fas fa-long-arrow-alt-down"></i>14°C</p>
+                </div>
+              </div>
+            </div>
+
+ <div class="col nd-4">
+    <div class="card border-info rounded-circle" style="max-width: 10rem;">
+                                      <div class="card-body text-info">
+                                        <strong class="card-title">Date</strong>
+                                 <p class="card-text">🌧<br/> <i class="fas fa-long-arrow-alt-up"></i>21°C <i class="fas fa-long-arrow-alt-down"></i>14°C</p>
+                               </div>
+                             </div>
+                           </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="src/script.js"></script>
+</body>
+</html>
