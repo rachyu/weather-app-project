@@ -43,6 +43,8 @@ function showTemp(response) {
   document.querySelector("#currentLow").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  document.querySelector("#emoji").innerHTML= `http://openweathermap.org/img/wn/${
+    forecast.weather[0].icon}@2x.png/`
 }
 
 function search(city) {
