@@ -80,17 +80,36 @@ let currentLocation = document.querySelector("#location");
 currentLocation.addEventListener("click", runCoords);
 
 search("London");
+let fahLink=document.querySelector("#cel-to-fah");
+let celLink= document.querySelector("#fah-to-cel");
 
-function unitChangeTemp(event) {
+
+function unitCelToFah(event) {
 event.preventDefault();
 let fahTemp = document.querySelector("#current-temp");
 fahTemp.innerHTML= `${Math.round((celsiusTemp * 9) / 5 + 32)}°F`;
+fahLink.classList.add("selected");
+celLink.classList.remove("selected");
 }
 
-let changeUnit = document.querySelector("#change-unit");
-changeUnit.addEventListener("click", unitChangeTemp);
+function unitFahToCel(event) {
+  event.preventDefault();
+  let CelTemp = document.querySelector("#current-temp");
+  CelTemp.innerHTML= `${Math.round(celsiusTemp)}°C`;
+  fahLink.classList.remove("selected");
+celLink.classList.add("selected");
+   
+  }
+
+let changeCelToFah = fahLink;
+changeCelToFah.addEventListener("click", unitCelToFah);
+
+let changeFahToCel = celLink;
+changeFahToCel.addEventListener("click", unitFahToCel);
 
 let celsiusTemp = null;
+
+
 
 //function changeToCelFunction(event) {
 // event.preventDefault();

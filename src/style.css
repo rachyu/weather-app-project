@@ -61,14 +61,21 @@ body {
   .current-hl {
     text-align: center;
   }
+
   .change-unit {
     vertical-align: top;
   }
-  .change-unit :hover {
-    font-weight: bold;
-    cursor: pointer;
-  }
   
+  .change-unit .selected {
+    color:#311b92;
+    cursor: default;
+  }
+
+  .change-unit .selected:hover{
+   text-decoration:none;
+   cursor: default;
+  }
+
   .col {
     padding: 13px;
   }
