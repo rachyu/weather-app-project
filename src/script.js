@@ -97,7 +97,7 @@ function unitFahToCel(event) {
   let CelTemp = document.querySelector("#current-temp");
   CelTemp.innerHTML= `${Math.round(celsiusTemp)}°C`;
   fahLink.classList.remove("selected");
-celLink.classList.add("selected");
+  celLink.classList.add("selected");
    
   }
 
@@ -109,12 +109,3 @@ changeFahToCel.addEventListener("click", unitFahToCel);
 
 let celsiusTemp = null;
 
-
-
-//function changeToCelFunction(event) {
-// event.preventDefault();
-// search(city);
-//}
-
-//let changeToCel = document.querySelector("#change-unit-hidden");
-//changeToCel.addEventListener("click", search);
