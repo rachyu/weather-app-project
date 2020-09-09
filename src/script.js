@@ -42,6 +42,7 @@ function showTemp(response) {
   document.querySelector("#currentLow").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  celsiusTemp= response.data.main.temp;
   let emojiElement= document.querySelector("#emoji");
   emojiElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   emojiElement.setAttribute("alt", response.data.weather[0].description);
@@ -83,11 +84,13 @@ search("London");
 function unitChangeTemp(event) {
 event.preventDefault();
 let fahTemp = document.querySelector("#current-temp");
-fahTemp.innerHTML= `${Math.round((20 * 9) / 5 + 32)}°F`;
+fahTemp.innerHTML= `${Math.round((celsiusTemp * 9) / 5 + 32)}°F`;
 }
 
 let changeUnit = document.querySelector("#change-unit");
 changeUnit.addEventListener("click", unitChangeTemp);
+
+let celsiusTemp = null;
 
 //function changeToCelFunction(event) {
 // event.preventDefault();
