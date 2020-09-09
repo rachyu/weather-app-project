@@ -33,8 +33,7 @@ currentDateTime.innerHTML = `${day} ${date}/${months} at ${hours}:${minutes}`;
 function showTemp(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°C`;
+    response.data.main.temp)}°C`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#currentHigh").innerHTML = Math.round(
