@@ -15,6 +15,8 @@ if (months < 10) {
   months = `0${months}`;
 }
 let date = now.getDate();
+if (date < 10) {
+  date = `0${date}`;}
 let hours = now.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
@@ -27,8 +29,6 @@ if (minutes < 10) {
 let currentDateTime = document.querySelector("#current-datetime");
 currentDateTime.innerHTML = `${day} ${date}/${months} at ${hours}:${minutes}`;
 
-//Add a search engine, when searching for a city (i.e. Paris),
-//display the city name on the page after the user submits the form.
 
 function showTemp(response) {
   document.querySelector("h1").innerHTML = response.data.name;
@@ -43,8 +43,9 @@ function showTemp(response) {
   document.querySelector("#currentLow").innerHTML = Math.round(
     response.data.main.temp_min
   );
-  document.querySelector("#emoji").innerHTML= `http://openweathermap.org/img/wn/${
-    forecast.weather[0].icon}@2x.png/`
+  let emojiElement= document.querySelector("#emoji");
+  emojiElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  emojiElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {
