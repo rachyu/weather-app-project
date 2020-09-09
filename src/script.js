@@ -80,14 +80,14 @@ currentLocation.addEventListener("click", runCoords);
 
 search("London");
 
-//function unitChangeTemp(event) {
-//  event.preventDefault();
-//  let fahTemp = document.querySelector("#current-temp");
-//  fahTemp.innerHTML = Math.round((fahTemp.value * 9) / 5 + 32);
-//}
+function unitChangeTemp(event) {
+event.preventDefault();
+let fahTemp = document.querySelector("#current-temp");
+fahTemp.innerHTML= `${Math.round((20 * 9) / 5 + 32)}°F`;
+}
 
-//let changeUnit = document.querySelector("#change-unit");
-//changeUnit.addEventListener("click", unitChangeTemp);
+let changeUnit = document.querySelector("#change-unit");
+changeUnit.addEventListener("click", unitChangeTemp);
 
 //function changeToCelFunction(event) {
 // event.preventDefault();
