@@ -48,12 +48,21 @@ function showTemp(response) {
   emojiElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+  function showForecast(response) {
+    console.log(response.data);
+  }
+
 function search(city) {
   let apiKey = "501c9abeab1dab5979d0718d7d83a51d";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemp);
+
+  let apiUrlFor=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`
+  axios.get(apiUrlFor).then(showForecast);
 }
+
+
 
 function handleSubmit(event) {
   event.preventDefault();
