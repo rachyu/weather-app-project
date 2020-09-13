@@ -80,14 +80,14 @@ body {
     padding: 13px;
   }
   .forecast {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     position: relative;
     line-height: 12px;
     margin-top: -40px;
   }
   
-  .nd {
+  .nd-0 {
     margin-top: -60px;
     margin-left: 40px;
   }
@@ -98,7 +98,7 @@ body {
   }
   
   .nd-2 {
-    margin-top: 50px;
+    margin-top: 10px;
   }
   
   .nd-3 {
