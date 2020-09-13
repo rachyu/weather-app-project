@@ -1,4 +1,4 @@
-//display the current date and time using JavaScript: Tuesday 16:00
+
 let now = new Date();
 let days = [
   "Sunday",
@@ -29,7 +29,8 @@ if (minutes < 10) {
 let currentDateTime = document.querySelector("#current-datetime");
 currentDateTime.innerHTML = `${day} ${date}/${months} at ${hours}:${minutes}`;
 
-function formateDateFore (timestamp){
+function formatDate (timestamp){
+  let foreDate= new Date (timestamp);
   let days = [
     "Sun",
     "Mon",
@@ -39,18 +40,26 @@ function formateDateFore (timestamp){
     "Fri",
     "Sat"
   ];
-  let day = days[now.getDay()];
+  let day = days[foreDate.getDay()];
+  let months = foreDate.getMonth() + 1;
+  if (months < 10) {
+  months = `0${months}`;
+  }
+  let date = foreDate.getDate();
+  if (date < 10) {
+  date = `0${date}`;}
+   return `${day} ${date}/${months}`
 }
 function showForecast(response) {
   console.log(response);
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.daily[0];
+  let forecast = response.data.daily[1];
   console.log(forecast);
   forecastElement.innerHTML= `
   <div class="col nd">
   <div class="card border-info rounded-circle" style="max-width: 10rem;">
       <div class="card-body text-info" >
-      <strong class="card-title"> <strong> ${formateDateFore(forecast.dt*1000)}</strong>
+      <strong class="card-title"> <strong> ${formatDate(forecast.dt*1000)}</strong>
   <p class="card-text"> <img src = "http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
   width="35"
   />
