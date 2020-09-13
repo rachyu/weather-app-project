@@ -34,7 +34,7 @@ body {
   .location {
     display: inline;
     position: relative;
-    margin-right: -230px;
+    margin-right: -240px;
 
   }
   .location:hover {
@@ -46,7 +46,7 @@ body {
   }
   
   .border {
-    background: #e3f2fd;
+    background: #F0F8FF;
     border-radius: 50%;
     width: 550px;
     height: 550px;
@@ -80,10 +80,10 @@ body {
     padding: 13px;
   }
   .forecast {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     position: relative;
-    line-height: 12px;
+    line-height: 10px;
     margin-top: -40px;
   }
   

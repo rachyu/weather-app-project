@@ -50,8 +50,7 @@ function formatDate (timestamp){
   date = `0${date}`;}
    return `${day} ${date}/${months}`
 }
-function showForecast(response) {
-  console.log(response);
+function showForecast(response){
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
@@ -59,15 +58,16 @@ function showForecast(response) {
   for (let index = 1; index <6 ; index ++){
     forecast = response.data.daily[index];
     forecastElement.innerHTML+= `
-  <div class="col nd-${index-1}">
-  <div class="card border-info rounded-circle">
-      <div class="card-body text-info" >
+    <div class="col nd-${index-1}">
+    <div class="card border-info rounded-circle">
+        <div class="card-body text-info" >
       <strong class="card-title"> <strong> ${formatDate(forecast.dt*1000)}</strong>
   <p class="card-text"> <img src = "http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
   width="30"
   />
   <br/> <i class="fas fa-long-arrow-alt-up"></i> ${Math.round(forecast.temp.max)}°
-  <br/> <i class="fas fa-long-arrow-alt-down"></i> ${Math.round(forecast.temp.min)}° </p>
+  <br/>
+ <i class="fas fa-long-arrow-alt-down"></i> ${Math.round(forecast.temp.min)}° </p>
 </div>
 </div> 
 </div>
@@ -75,7 +75,6 @@ function showForecast(response) {
   }}
 
   function showTemp(response) {
-  console.log(response);
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = `${Math.round(
     response.data.main.temp)}°C`;
