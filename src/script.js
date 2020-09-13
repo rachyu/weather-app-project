@@ -53,9 +53,12 @@ function formatDate (timestamp){
 function showForecast(response) {
   console.log(response);
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.daily[1];
-  console.log(forecast);
-  forecastElement.innerHTML= `
+  forecastElement.innerHTML = null;
+  let forecast = null;
+ 
+  for (let index = 1; index <7 ; index ++){
+    forecast = response.data.daily[index];
+    forecastElement.innerHTML+= `
   <div class="col nd">
   <div class="card border-info rounded-circle" style="max-width: 10rem;">
       <div class="card-body text-info" >
@@ -67,8 +70,8 @@ function showForecast(response) {
   <br/> <i class="fas fa-long-arrow-alt-down"></i> ${Math.round(forecast.temp.min)}° </p>
 </div>
 </div>
-</div>`
-}
+</div>`;
+  }}
 
 
 function showTemp(response) {
@@ -158,4 +161,3 @@ let changeFahToCel = celLink;
 changeFahToCel.addEventListener("click", unitFahToCel);
 
 let celsiusTemp = null;
-
