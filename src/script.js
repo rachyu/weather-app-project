@@ -59,8 +59,8 @@ function showForecast(response){
     forecast = response.data.daily[index];
     forecastElement.innerHTML+= `
     <div class="col nd-${index-1}">
-    <div class="card border-info rounded-circle">
-        <div class="card-body text-info" >
+    <div class="card border-lighter rounded-circle">
+        <div class="card-body text-lighter" >
       <strong class="card-title"> <strong> ${formatDate(forecast.dt*1000)}</strong>
   <p class="card-text"> <img src = "http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" 
   width="30"
@@ -105,7 +105,6 @@ function search(city) {
   
 }
 
- 
 
 function handleSubmit(event) {
   event.preventDefault();
